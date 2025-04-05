@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Armies Display';
+    src: url('/public/fonts/Armiesdisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
