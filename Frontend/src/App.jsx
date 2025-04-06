@@ -6,14 +6,14 @@ function App() {
   
   return (
     <div className = {` min-h-screen overflow-hidden ${theme ? 'bg-white text-black' : 'bg-black text-white'} `}> 
-      <Header setheme = {setheme} />
+      <Header setheme = {setheme} theme = {theme} />
       <IntroBody />
       <Me />
     </div>
   )
 }
 
-function Header({setheme}){
+function Header({theme , setheme}){
 
   function ldmode(){
     setheme(prev => !prev);
@@ -27,7 +27,7 @@ function Header({setheme}){
       <div className='h-[51.1px] w-[109.7px]  cursor-pointer'>Contact</div>
 
       <div className='ml-[500px]'>
-        <img src="/img/image.png" className='w-[100px] h-[50px] cursor-pointer' onClick={ldmode}></img>
+        <img src={theme ? `/img/Dark Mode.png`:`/img/Light Mode.png`}  className='w-[85px] h-[40px] cursor-pointer' onClick={ldmode}></img>
       </div>
     </div>
   )
