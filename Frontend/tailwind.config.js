@@ -14,7 +14,12 @@ export default {
       },
       width : {
         128 : '512px' ,
-      }
+      },
+      colors :{
+          gray : {
+            999 : '#070A0F',
+          },
+      },
     },
   },
   plugins: [],
