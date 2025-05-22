@@ -15,3 +15,21 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SF-Pro-Display-Light.otf') format('truetype');
+  font-weight : normal ;
+  font-style : normal ; 
+}
+
+@font-face {
+  font-family: 'Langar-Regular';
+  src: url('/fonts/SF-Pro-Display-Light.otf') format('truetype');
+  font-weight : normal ;
+  font-style : normal ; 
+}
+
+.headerCSS {
+  @apply h-[52px] w-[85px] mr-[40px] ml-[40px]  cursor-pointer;
+}

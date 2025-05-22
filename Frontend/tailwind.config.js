@@ -9,7 +9,12 @@ export default {
       fontFamily : {
       armies : ['Armies Display'] ,
       aptos : ['Aptos'] ,
+      langar : ['Langar-Regular'] ,
+      SF_Pro : ['SF Pro'],
       },
+      width : {
+        128 : '512px' ,
+      }
     },
   },
   plugins: [],
