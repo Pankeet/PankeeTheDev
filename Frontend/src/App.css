@@ -31,5 +31,5 @@
 }
 
 .headerCSS {
-  @apply h-[52px] w-[85px] mr-[40px] ml-[40px] cursor-pointer;
+  @apply h-[52px] w-[85px] mr-[40px] ml-[40px] cursor-pointer; 
 }

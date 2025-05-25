@@ -1,5 +1,5 @@
 "use client"
-import { BrowserRouter , Routes , Route , Link , Outlet} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as motion from "motion/react-client"
 
 export default function Header({theme , setheme}){
@@ -26,11 +26,11 @@ export default function Header({theme , setheme}){
   }
 
       return (
-        <div className="font-armies flex text-3xl my-[10px]">
-          <div><span class="headerCSS">Home</span></div>
-          <div><span class="headerCSS">About Me</span></div>
-          <div><span class="headerCSS">Projects</span></div>
-          <div><span class="headerCSS">Contact</span></div>
+        <div className="font-armies flex text-[1.7rem] my-[5px]">
+            <div><Link to="/" className="headerCSS">Home</Link></div>
+            <div><Link to="/about" className="headerCSS">About Me</Link></div>
+            <div><Link to="/projects" className="headerCSS">Projects</Link></div>
+            <div><Link to="/contact" className="headerCSS">Contact</Link></div>
   
           <div className = 'w-[126px] h-[72px] ml-[520px] my-[6.5px]'>
           <button className="toggle-container"

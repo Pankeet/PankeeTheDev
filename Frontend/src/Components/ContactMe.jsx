@@ -1,7 +1,7 @@
 //import { useRef } from 'react';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-export default function Contact(){
+export default function Contact({theme}){
     //const formRef = useRef(null);
 
     const CopyText = (text , bool) => {
@@ -12,9 +12,9 @@ export default function Contact(){
       };
     
     return (
-        <div className="font-serif overflow-auto">
+        <div className={`font-serif overflow-auto ${theme ? 'bg-[#ece9e2] text-black' : 'text-[#ece9e2] bg-black'}`}>
             <div className="text-5xl font-light pl-10 pt-3 pb-3 bg-[url('/img/banner.png')] bg-cover bg-no-repeat ">
-                <div>Contact</div>
+                <div className="text-black">Contact</div>
             </div>
             <div className="pt-10 pl-10 flex">
                 <span className="text-5xl">Helpful <br />Information</span>
@@ -27,10 +27,10 @@ export default function Contact(){
                 <span className="text-xl cursor-pointer" onClick={() => CopyText('9875142251', true)}>+91 9875142251</span>
                 </span>
                 <span className="pl-[23rem] pt-4 text-xl">First name* <br />
-                <input type="text" className="border-gray-600 border-b-1 pt-1 outline-none"></input>
+                <input type="text" className="border-gray-600 border-b pt-1 outline-none bg-transparent"></input>
                 </span>
                 <span className="pl-48 pt-3.5 text-xl">Last name* <br />
-                <input type="text" className="border-gray-600 border-b-1 pt-1 outline-none"></input>
+                <input type="text" className="border-gray-600 border-b pt-1 outline-none bg-transparent"></input>
                 </span>
             </div>
             <div className="flex pt-10 pl-10">
@@ -38,16 +38,16 @@ export default function Contact(){
                 <span className="text-xl cursor-pointer" onClick={() => CopyText('pankeet04@gmail.com' , false)}>pankeet04@gmail.com</span>
                 </span>
                 <span className='pl-[307px] pt-4 text-xl'>Email* <br />
-                <input type="email" className="border-gray-600 border-b-1 pt-1 outline-none"></input>
+                <input type="email" className="border-gray-600 border-b pt-1  outline-none bg-transparent"></input>
                 </span>
                 <span className='pl-48 pt-3.5 text-xl'>Subject* <br />
-                <input type="text" className="border-gray-600 overflow-none border-b-1 pt-1 outline-none w-2xs"></input>
+                <input type="text" className="border-gray-600 overflow-none border-b bg-transparent pt-1 outline-none w-2xs"></input>
                 </span>
             </div>
             <div className="flex pt-10 pl-10">
                 <span className="text-2xl">Location <br /> <span className="text-xl">Vadodara, Gujarat, India</span></span>
                 <span className="pl-[290px] pt-4 text-xl">Message* <br />
-                <input type="text" className="border-gray-600 border-b-1 pt-1 outline-none w-2xl"></input>
+                <input type="text" className="border-gray-600 bg-transparent border-b pt-1 outline-none w-[40rem]"></input>
                 </span>
             </div>
 
