@@ -1,5 +1,5 @@
 "use client"
-
+import { BrowserRouter , Routes , Route , Link , Outlet} from 'react-router-dom';
 import * as motion from "motion/react-client"
 
 export default function Header({theme , setheme}){
