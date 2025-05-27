@@ -3,9 +3,9 @@ import nodemailer from 'nodemailer';
 import recruiter from '../model/recruiterInfo.js';
 import dotenv from 'dotenv'
 dotenv.config();
-const Router = express();
+const RecruitRouter = express.Router();
 
-Router.post('/sendmail' , async (req , res) => {
+RecruitRouter.post('/sendmail' , async (req , res) => {
     const { firstname , lastname , email , subject , message} = req.body;
 
     const findRecruiter = await recruiter.findOne({email});
@@ -19,7 +19,7 @@ Router.post('/sendmail' , async (req , res) => {
         service : 'gmail', 
         auth : {
         user : process.env.USER,
-        password : process.env.PASS
+        pass : process.env.PASS
         }
     });
 
@@ -33,11 +33,17 @@ Router.post('/sendmail' , async (req , res) => {
     transporter.sendMail(mailOptions , (err , data) => {
         if(err){
             console.error('Failed to send', err);
+            return res.status(500).json({
+                error : err,
+                message : "Something went wrong"
+            })
         }
         else{
-            console.log("Message Sent Successfully");
+            return res.status(200).json({
+                message : "Message Sent Successfully"
+            });
         }
     })
 })
 
-export default Router;
+export default RecruitRouter;
