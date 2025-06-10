@@ -9,27 +9,6 @@
     font-style: normal;
   }
   
-@font-face {
-  font-family: 'Aptos';
-  src: url('/fonts/Aptos.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Pro';
-  src: url('/fonts/SF-Pro-Display-Light.otf') format('truetype');
-  font-weight : normal ;
-  font-style : normal ; 
-}
-
-@font-face {
-  font-family: 'Langar-Regular';
-  src: url('/fonts/SF-Pro-Display-Light.otf') format('truetype');
-  font-weight : normal ;
-  font-style : normal ; 
-}
-
 .headerCSS {
   @apply h-[51.1px] w-[85.1px] mr-[45px] ml-[45px] cursor-pointer;
 }

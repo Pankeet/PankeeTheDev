@@ -1,13 +1,14 @@
 "use client"
 import { Link } from 'react-router-dom';
-import * as motion from "motion/react-client"
+import { motion } from "motion/react";
 
 export default function Header({theme , setheme}){
 
-    function ldmode(){
-      setheme(current => !current);
-    }
-
+    
+  function ldmode(){
+    setheme(current => !current);
+  }
+    
   const container = {
     width: 50,
     height: 25,
@@ -26,28 +27,28 @@ export default function Header({theme , setheme}){
   }
 
       return (
-        <div className="font-armies flex text-[1.7rem] my-[5px]">
+        <div className="font-serif flex text-xl my-3 mx-2 border-b-2 border-black pb-2 rounded-lg">
             <div><Link to="/" className="headerCSS">Home</Link></div>
             <div><Link to="/about" className="headerCSS">About Me</Link></div>
             <div><Link to="/projects" className="headerCSS">Projects</Link></div>
-            <div><Link to="/contact" className="headerCSS">Contact</Link></div>
+            <div><a href='https://contact-me-flax-nu.vercel.app/'className="headerCSS">Contact</a></div>
   
-          <div className = 'w-[126px] h-[72px] ml-[520px] my-[6.5px]'>
+          <div className = 'ml-auto mr-10'>
           <button className="toggle-container"
           style={{
             ...container,
             justifyContent: "flex-" + (theme ? "start" : "end"),
             }}
-            onClick={ldmode}
-            >
+            onClick={ldmode}>
+
             <motion.div
                 className="toggle-handle"
                 style={handle}
                 layout
                 transition={{
                   type: "spring",
-                    visualDuration: 0.2,
-                    bounce: 0.3,
+                    visualDuration: 0.3,
+                    bounce: 0.2,
                   }}
             />
         </button>
