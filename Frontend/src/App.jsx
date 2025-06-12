@@ -10,7 +10,7 @@ function App() {
   
   return (
     <Router>
-      <div className = {`overflow-hidden min-h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-999' : 'bg-gray-999 text-[#ece9e2]'} `}> 
+      <div className = {`overflow-hidden min-h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-999' : 'bg-gradient-to-r from-gray-999 to-black text-[#ece9e2]'} `}> 
       <Header setheme = {setheme} theme = {theme}  />
     <Routes>
       <Route path = "/" element={<Home />}></Route>

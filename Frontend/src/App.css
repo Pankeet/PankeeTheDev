@@ -12,3 +12,7 @@
 .headerCSS {
   @apply mr-10 ml-10 cursor-pointer text-center; 
 }
+
+.activeHeader {
+  @apply text-[#b74b4b] border-b-2 border-b-[#b74b4b];
+}

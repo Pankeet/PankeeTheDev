@@ -14,7 +14,7 @@ export default {
       },
       colors :{
           gray : {
-            999 : '#070A0F',
+            999 : '#010309',
             101 : '#DADADA'
           },
       },

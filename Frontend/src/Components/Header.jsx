@@ -1,9 +1,11 @@
 "use client"
-import { Link } from 'react-router-dom';
+import { Link , useLocation } from 'react-router-dom';
 import { motion } from "motion/react";
 
 export default function Header({theme , setheme}){
 
+  const location = useLocation();
+  console.log(location.pathname)
     
   function ldmode(){
     setheme(current => !current);
@@ -27,11 +29,11 @@ export default function Header({theme , setheme}){
   }
 
       return (
-        <div className="font-serif flex text-xl my-3 mx-2 border-b-2 border-black pb-2 rounded-lg">
-            <div><Link to="/" className="headerCSS">Home</Link></div>
-            <div><Link to="/about" className="headerCSS">About Me</Link></div>
-            <div><Link to="/projects" className="headerCSS">Projects</Link></div>
-            <div><a href='https://contact-me-flax-nu.vercel.app/'className="headerCSS">Contact</a></div>
+        <div className="font-serif flex text-xl my-3 mx-3 pb-2">
+            <div><Link to="/" className='headerCSS'><span className={`${location.pathname == '/' || '' ? 'activeHeader' : '' } hover:text-[#b74b4b] hover:border-b-2 hover:border-b-[#b74b4b]`}>Home</span></Link></div>
+            <div><Link to="/about" className="headerCSS"><span className={`${location.pathname == '/about' ? 'activeHeader' : '' } hover:text-[#b74b4b] hover:border-b-2 hover:border-b-[#b74b4b]`}>About Me</span></Link></div>
+            <div><Link to="/projects" className="headerCSS"><span className={`${location.pathname === '/projects' ? 'activeHeader' : ''} hover:text-[#b74b4b] hover:border-b-2 hover:border-b-[#b74b4b] `}>Projects</span></Link></div>
+            <div><a href='https://contact-me-flax-nu.vercel.app/' className='headerCSS hover:text-[#b74b4b] hover:border-b-2 hover:border-b-[#b74b4b]'>Contact</a></div>
   
           <div className = 'ml-auto mr-10'>
           <button className="toggle-container"
