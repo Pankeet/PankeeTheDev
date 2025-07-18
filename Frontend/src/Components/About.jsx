@@ -3,6 +3,7 @@ import { FaReact , FaJava , FaPython , FaNodeJs , FaHtml5 , FaCss3 , FaGit , FaA
 import cpp from "/img/cpp.svg";
 import next from "/img/nextjs.svg";
 import mongo from "/img/mongodb.png";
+import tsc from "/img/typescript.svg";
 import Bot  from "/img/GptBot.png";
 export default function AboutMe(){
     return (
@@ -41,18 +42,19 @@ export default function AboutMe(){
                     <div className="mt-6">
                         <span className="text-2xl font-semibold text-[#631FF0]">My TechStack</span>
                     </div>
-                    <div className="flex gap-4 mt-4">
-                        <FaJava className="w-9 h-9"/>
-                        <FaNodeJs className="w-9 h-9"/>
-                        <FaPython className="w-9 h-9"/>
+                    <div className="flex gap-3 mt-4">
+                        <img src={cpp} alt="cpp" className="w-9 h-9" />
                         <FaReact className="w-9 h-9"/>
+                        <img src={tsc} className="w-9 h-9" alt="typescript" />
+                        <FaGit  className="w-9 h-9" />
+                        <FaNodeJs className="w-9 h-9"/>
+                        <img src={mongo} alt="mongodb" className="w-9 h-9" />
+                        <img src={next} alt="nextjs" className="w-9 h-9" />
+                        <FaHtml5 className="w-9 h-9" />
                         <FaCss3  className="w-9 h-9" />
                         <FaAngular  className="w-9 h-9" />
-                        <FaGit  className="w-9 h-9" />
-                        <img src={cpp} alt="cpp" className="w-9 h-9" />
-                        <img src={next} alt="nextjs" className="w-9 h-9" />
-                        <img src={mongo} alt="mongodb" className="w-9 h-9" />
-                        
+                        <FaJava className="w-9 h-9"/>
+                        <FaPython className="w-9 h-9"/>
                     </div>
                 </div>
             </div>
