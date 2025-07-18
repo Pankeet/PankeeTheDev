@@ -2,17 +2,18 @@ import * as motion from "motion/react-client"
 export default function ScrollTriggered() {
     return (
         <div style={container}>
-            {food.map(([emoji, hueA, hueB], i) => (
-                <Card i={i} emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} />
+            {homepageSections.map(({content, hueA, hueB, i , href}) => (
+                <Card i={i} content={content} hueA={hueA} hueB={hueB} href={href} key={i} />
             ))}
         </div>
     )
 }
 
-function Card({ emoji, hueA, hueB, i }) {
+function Card({ content , hueA, hueB, i , href }) {
     const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
 
     return (
+        <a href={href} style={{ textDecoration: "none"}} >
         <motion.div
             className={`card-container-${i}`}
             style={cardContainer}
@@ -22,9 +23,10 @@ function Card({ emoji, hueA, hueB, i }) {
         >
             <div style={{ ...splash, background }} />
             <motion.div style={card} variants={cardVariants} className="card">
-                {emoji}
+                {content}
             </motion.div>
         </motion.div>
+        </a>
     )
 }
 
@@ -93,13 +95,33 @@ const card = {
  * ==============   Data   ================
  */
 
-const food = [
-    ["🍅", 340, 10],
-    ["🍊", 20, 40],
-    ["🍋", 60, 90],
-    ["🍐", 80, 120],
-    ["🍏", 100, 140],
-    ["🫐", 205, 245],
-    ["🍆", 260, 290],
-    ["🍇", 290, 320],
-]
+const homepageSections = [
+    { content: <Ivy />, hueA: 250, hueB: 280  , href:"https://ivy-academy.vercel.app/"},
+    { content: <Zeroh />, hueA: 250, hueB: 280 , href:"https://zerohda.vercel.app/"},
+    { content: <Socket />, hueA: 250, hueB: 280 , href:"https://socket-talk-liart.vercel.app/"},
+    { content: <Neuro />, hueA: 250, hueB: 280 , href:"https://neuro-nest-eta.vercel.app/" },
+];
+
+function Ivy(){
+    return (
+        <img src="/img/Ivy.png" alt="Ivy" className="w-72 h-72" />
+    )
+}
+
+function Zeroh(){
+    return(
+        <img src="/img/Zeroh.png" alt="Zerohda" className="w-72 h-72" />
+    )
+}
+
+function Socket(){
+    return(
+        <img src="/img/Socket.png" alt="Socket" className="w-72 h-72" />
+    )
+}
+
+function Neuro(){
+    return(
+        <img src="/img/Neuro.png" alt="Neuro" className="w-72 h-72" />
+    )
+}

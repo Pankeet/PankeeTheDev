@@ -1,17 +1,17 @@
 "use client";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from "motion/react";
 import gsap from 'gsap';
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect , useRef } from 'react';
 
 
 export default function Header({ theme, setheme }) {
-  const location = useLocation();
+
+  const animate = useRef();
 
   useLayoutEffect(()=>{
-    const tl = gsap.timeline();
-    tl.from("div" , {
-      y:-30,
+    gsap.from( animate.current.children , {
+      y:-20,
       duration:0.3,
       opacity:0,
       delay:0.2,
@@ -41,7 +41,7 @@ export default function Header({ theme, setheme }) {
   };
 
   return (
-    <div className="font-serif flex text-xl my-3 mx-3 pb-2">
+    <div ref={animate} className="font-serif flex text-xl mt-3 mb-1 mx-3 pb-2 ">
       <div><Link to="/" className='headerCSS'><span className={`${location.pathname === '/' ? 'activeHeader' : ''} hover:text-[#b74b4b]  hover:border-b-2 hover:border-b-[#b74b4b]`}>Home</span></Link></div>
       <div><Link to="/about" className="headerCSS"><span className={`${location.pathname === '/about' ? 'activeHeader' : ''} hover:text-[#b74b4b] hover:border-b-2 hover:border-b-[#b74b4b]`}>About Me</span></Link></div>
       <div><Link to="/projects" className="headerCSS"><span className={`${location.pathname === '/projects' ? 'activeHeader' : ''} hover:text-[#b74b4b] hover:border-b-2 hover:border-b-[#b74b4b] `}>Projects</span></Link></div>

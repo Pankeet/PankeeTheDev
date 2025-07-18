@@ -1,20 +1,27 @@
 import './App.css'
 import Header from "./Components/Header";
 import ScrollTriggered from './Components/Project';
-import { useState } from 'react' ;
-import IntroBody from './Components/IntroBody';
+import { useEffect, useState } from 'react' ;
+import IntroBody from './Components/Home';
+import AboutMe from "./Components/About";
 import { BrowserRouter as Router, Routes, Route ,Outlet } from 'react-router-dom';
 function App() {
 
-  const [theme , setheme] = useState(true);
-  
+  const [theme , setheme] = useState();
+
+  useEffect(() => {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(isDarkMode) setheme(false);
+    else setheme(true);
+  },[setheme]);
+
   return (
     <Router>
-      <div className = {`overflow-hidden min-h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-999' : 'bg-gradient-to-r from-gray-999 to-black text-[#ece9e2]'} `}> 
-      <Header setheme = {setheme} theme = {theme}  />
+      <div className = {`overflow-x-hidden h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-950' : 'bg-gradient-to-r from-gray-950 to-black text-[#ece9e2]'} `}> 
+      <div><Header setheme = {setheme} theme = {theme}  /></div>
     <Routes>
-      <Route path = "/" element={<Home />}></Route>
-      <Route path = "/about" element={<About />}></Route>
+      <Route path = "/" element={<Home theme={theme} />}></Route>
+      <Route path = "/about" element={<About/>}></Route>
       <Route path = "/projects" element={<Project />}></Route>
     </Routes>
     </div>
@@ -22,14 +29,14 @@ function App() {
   )
 }
 
-function Home(){
+function Home({theme }){
   return (
-    <><IntroBody /></>
+    <><IntroBody theme={theme} /></>
   )
 }
 
 function About(){
-  return(<> <div>I am Pankeet The Great</div></>)
+  return(<><AboutMe /> </>)
 }
 
 function Project(){

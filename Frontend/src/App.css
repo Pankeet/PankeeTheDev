@@ -18,3 +18,6 @@
   @apply text-[#b74b4b] border-b-2 border-b-[#b74b4b];
 }
 
+.imgCSS{
+  @apply w-80 h-80 rounded-full;
+}
