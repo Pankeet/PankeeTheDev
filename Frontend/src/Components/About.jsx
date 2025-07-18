@@ -1,20 +1,23 @@
 import { FaGithub , FaLinkedin } from "react-icons/fa";
-import Bot  from "/img/GptBot.png"
+import { FaReact , FaJava , FaPython , FaNodeJs , FaHtml5 , FaCss3 , FaGit , FaAngular } from "react-icons/fa";
+import cpp from "/img/cpp.svg";
+import next from "/img/nextjs.svg";
+import mongo from "/img/mongodb.png";
+import Bot  from "/img/GptBot.png";
 export default function AboutMe(){
     return (
         <div className="h-screen w-full grid grid-cols-4 font-serif">
             <div className="col-span-2 flex justify-center items-center">
                 <img src={Bot} alt="Software Engineer" className="size-96 shadow-lg shadow-[#631FF0]" />
             </div>
-            <div className="col-span-2 flex justify-center items-center">
+            <div className="col-span-2 mt-5">
                 <div>
-                <div>
-                <span className="text-4xl font-semibold text-[#631FF0]">
+                <span className="text-2xl font-semibold text-[#631FF0]">
                     About Me
                 </span>
                 </div>
                 <div>
-                    <div className="text-xl text-justify mr-20 mt-6 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-6">      
+                    <div className="text-md text-justify mr-20 mt-6 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-6">      
                         <p>
                            <i>Welcome to my portfolio.</i> I'm Pankeet, a 21-year-old Computer Science 
                            undergraduate with a strong passion for Software Development, System Design, and 
@@ -34,8 +37,24 @@ export default function AboutMe(){
                         </p>
                     </div>
                 </div>
+                <div>
+                    <div className="mt-6">
+                        <span className="text-2xl font-semibold text-[#631FF0]">My TechStack</span>
+                    </div>
+                    <div className="flex gap-4 mt-4">
+                        <FaJava className="w-9 h-9"/>
+                        <FaNodeJs className="w-9 h-9"/>
+                        <FaPython className="w-9 h-9"/>
+                        <FaReact className="w-9 h-9"/>
+                        <FaCss3  className="w-9 h-9" />
+                        <FaAngular  className="w-9 h-9" />
+                        <FaGit  className="w-9 h-9" />
+                        <img src={cpp} alt="cpp" className="w-9 h-9" />
+                        <img src={next} alt="nextjs" className="w-9 h-9" />
+                        <img src={mongo} alt="mongodb" className="w-9 h-9" />
+                        
+                    </div>
                 </div>
-                
             </div>
         </div>
     )
