@@ -44,7 +44,6 @@ export default function Header({ theme, setheme }) {
   return (
     <div ref={animate} className="font-serif flex text-xl mt-3 mb-1 mx-3 pb-2 ">
       <div><Link to="/" className='headerCSS'><span className={`${location.pathname === '/' ? 'activeHeader' : ''} hover:text-red-400 hover:border-b-2 hover:border-b-red-400`}>Home</span></Link></div>
-      <div><Link to="/about" className="headerCSS"><span className={`${location.pathname === '/about' ? 'activeHeader' : ''} hover:text-red-400 hover:border-b-2 hover:border-b-red-400`}>About Me</span></Link></div>
       <div><Link to="/projects" className="headerCSS"><span className={`${location.pathname === '/projects' ? 'activeHeader' : ''} hover:text-red-400 hover:border-b-2 hover:border-b-red-400 `}>Projects</span></Link></div>
       <div><span><a href='https://contact-me-flax-nu.vercel.app/' className='headerCSS hover:text-red-400 hover:border-b-2 hover:border-b-red-400'>Contact</a></span></div>
 

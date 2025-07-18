@@ -1,44 +1,42 @@
 import { FaGithub , FaLinkedin } from "react-icons/fa";
-export default function AboutMe({theme}){
-    console.log(theme);
+import Bot  from "/img/GptBot.png"
+export default function AboutMe(){
     return (
-        <div className="font-serif h-screen">
-            <div className="mx-9 my-5 py-3 px-10 grid grid-cols-7 border-b border-black rounded-sm">
-                <div className="col-span-2 flex justify-start items-center">
-                    <span className="font-serif text-xl">Pankeet Manubarwala</span>
-                </div>
-                <div className="col-span-3 flex justify-center items-center gap-3">
-                    <a href="/files/Pankeet_Resume.pdf" 
-                        download  
-                        className="aboutCSS" >
-                        Achievements 
-                    </a>
-                    <a href="/files/Pankeet_Resume.pdf" 
-                        target="_blank" 
-                        className="aboutCSS" >
-                        Resume 
-                    </a>
-                    <a href="/files/Offer_Plus_Completion.pdf" 
-                        target="_blank" 
-                        className="aboutCSS" >
-                        Experience
-                    </a>
-                </div>
-                <div className="col-span-2 flex justify-end items-center gap-3">
-                    <a href="https://github.com/Pankeet" target="_blank" rel="noopener noreferrer" className={`${theme ? "text-black hover:text-gray-500" : " text-white hover:text-gray-400"} transition duration-200`}>
-                        <FaGithub className="w-9 h-9" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/pankeet04/" target="_blank" rel="noopener noreferrer" className={`${theme ? "text-black hover:text-gray-500" : " text-white hover:text-gray-400"} transition duration-200`}>
-                        <FaLinkedin className="w-9 h-9" />
-                    </a>
-                </div>
+        <div className="h-screen w-full grid grid-cols-4 font-serif">
+            <div className="col-span-2 flex justify-center items-center">
+                <img src={Bot} alt="Software Engineer" className="size-96 shadow-lg shadow-[#631FF0]" />
             </div>
-            <div className="m-10 text-2xl font-serif flex justify-center items-center">
-            <h1> Hey there! I'm Pankeet — an engineering student, full-stack web developer, and someone who believes in solving problems with clean code and coffee.
-                Currently building cool stuff like a Second Brain app, open project sharing platforms, and trying to dodge Parthism every day 😅.
-            </h1>
+            <div className="col-span-2 flex justify-center items-center">
+                <div>
+                <div>
+                <span className="text-4xl font-semibold text-[#631FF0]">
+                    About Me
+                </span>
+                </div>
+                <div>
+                    <div className="text-xl text-justify mr-20 mt-6 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-6">      
+                        <p>
+                           <i>Welcome to my portfolio.</i> I'm Pankeet, a 21-year-old Computer Science 
+                           undergraduate with a strong passion for Software Development, System Design, and 
+                           Product Management. I specialise in the MERN stack and Data Structures and Algorithms.
+                        </p> 
+                         <p>
+                         My skill set includes wireframing, problem-solving, front-end implementation, and 
+                         rigorous testing—ensuring that every piece of software is both flawless and 
+                         functionally robust. I have worked on a diverse range of projects, including mobile 
+                         applications, web platforms, and interactive dashboards—each centred around user-focused 
+                         design that fosters engagement.
+                         </p>
+                        <p>
+                        My long-term ambition is to master advanced algorithms, particularly Dynamic Programming. 
+                        I approach every project with unwavering commitment, precision, and a drive to deliver 
+                        intuitive, high-performance user experiences.
+                        </p>
+                    </div>
+                </div>
+                </div>
+                
             </div>
         </div>
     )
 }
-            

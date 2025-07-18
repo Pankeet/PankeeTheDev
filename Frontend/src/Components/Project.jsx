@@ -13,7 +13,7 @@ function Card({ content , hueA, hueB, i , href }) {
     const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
 
     return (
-        <a href={href} style={{ textDecoration: "none"}} >
+        <a href={href} target="_blank" style={{ textDecoration: "none"}} >
         <motion.div
             className={`card-container-${i}`}
             style={cardContainer}
