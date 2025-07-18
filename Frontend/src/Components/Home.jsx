@@ -66,7 +66,7 @@ export default function IntroBody({theme}){
         <a href="/files/Offer_Plus_Completion.pdf" 
            target="_blank" 
             className="aboutCSS" >
-            Experience
+            View Experience
         </a>
        </div>
        <div className="techLinks flex justify-start mx-36 mt-10 items-center gap-3">
