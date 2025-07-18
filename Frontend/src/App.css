@@ -15,9 +15,13 @@
 }
 
 .activeHeader {
-  @apply text-[#b74b4b] border-b-2 border-b-[#b74b4b];
+  @apply text-red-500 border-b-2 border-b-red-500;
 }
 
-.imgCSS{
+.imgCSS {
   @apply w-80 h-80 rounded-full;
+}
+
+.aboutCSS {
+  @apply bg-gray-200 text-black px-3 py-1 rounded-xl hover:bg-gray-300 ;
 }

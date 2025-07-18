@@ -18,11 +18,17 @@ function App() {
   return (
     <Router>
       <div className = {`overflow-x-hidden h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-950' : 'bg-gradient-to-r from-gray-950 to-black text-[#ece9e2]'} `}> 
-      <div><Header setheme = {setheme} theme = {theme}  /></div>
     <Routes>
-      <Route path = "/" element={<Home theme={theme} />}></Route>
-      <Route path = "/about" element={<About/>}></Route>
-      <Route path = "/projects" element={<Project />}></Route>
+      <Route path = "/" element={
+        <div>
+          <Header setheme = {setheme} theme = {theme} />
+          <Home theme={theme} />
+        </div>}></Route>
+      <Route path = "/about" element={<AboutMe theme={theme}/>}></Route>
+      <Route path = "/projects" element={<div>
+        <Header setheme = {setheme} theme = {theme} />
+        <Project />
+      </div>}></Route>
     </Routes>
     </div>
     </Router>
@@ -35,8 +41,8 @@ function Home({theme }){
   )
 }
 
-function About(){
-  return(<><AboutMe /> </>)
+function About({theme}){
+  return(<><AboutMe theme={theme}/> </>)
 }
 
 function Project(){

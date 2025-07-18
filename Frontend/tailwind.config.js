@@ -14,8 +14,13 @@ export default {
       },
       colors :{
           gray : {
-            101 : '#DADADA'
+            101 : '#DADADA',
+            200 : "#F3F4F6",
           },
+          purple : {
+            300 : "#e0e7ff",
+            600 : "#5046E4",
+          }
       },
     },
   },
