@@ -39,7 +39,7 @@ export default function IntroBody({theme}){
       <div className='grid place-content-center col-span-6'>
         <div className = {`text-2xl font-semibold ml-1 mb-1 bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "from-blue-200 to-blue-300"}`}>
           <Typewriter 
-            words={['C++ Programmer' , 'Software Engineer', 'Full Stack Developer', 'Ui/Ux designer' ]}
+            words={['C++ Programmer' , 'Jr. Software Developement Engineer', 'Computer Engineer' , 'Full Stack Developer' ]}
             loop={true}
             cursor
             cursorStyle='|'
