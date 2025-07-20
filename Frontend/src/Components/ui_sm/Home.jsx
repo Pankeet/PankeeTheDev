@@ -7,11 +7,6 @@ export default function IntroBody_sm({theme}){
 
   useLayoutEffect(()=>{
     const tl = gsap.timeline();
-      tl.from("img", {
-        opacity:0,
-        x:30,
-        duration: 0.6,
-      });
       tl.from("video", {
         opacity:0,
         x:30,
@@ -36,6 +31,15 @@ export default function IntroBody_sm({theme}){
   }, [])
     return (
       <>
+      <Helmet>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A comprehensive presentation of my professional identity, technical skill set, and practical experience" />
+        <meta property="og:title" content="Pankeet | Software Development Engineer" />
+        <meta property="og:description" content="Get to know me , my side hustles, and my TechStack" />
+        <meta property="og:image" content="https://pankeet-manubarwala.vercel.app/img/Logo.png" />
+        <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/" />
+      </Helmet>
       <div className='grid grid-cols-2 mt-7 mx-3'>
         <div className='col-span-1 grid place-content-center'>
             <div className={`ml-1 text-md inline-block max-w-48 break-words bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "from-blue-200 to-blue-300"}`}>
