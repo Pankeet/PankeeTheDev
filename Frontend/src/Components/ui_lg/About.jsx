@@ -44,17 +44,17 @@ export default function AboutMe_lg(){
                     </div>
                     <div className="flex gap-3 mt-4">
                         <img src={cpp} alt="cpp" className="w-9 h-9" />
-                        <FaReact className="w-9 h-9"/>
+                        <FaReact className="text-4xl"/>
                         <img src={tsc} className="w-9 h-9" alt="typescript" />
-                        <FaGit  className="w-9 h-9" />
-                        <FaNodeJs className="w-9 h-9"/>
+                        <FaGit  className="text-4xl" />
+                        <FaNodeJs className="text-4xl"/>
                         <img src={mongo} alt="mongodb" className="w-9 h-9" />
                         <img src={next} alt="nextjs" className="w-9 h-9" />
-                        <FaHtml5 className="w-9 h-9" />
-                        <FaCss3  className="w-9 h-9" />
-                        <FaAngular  className="w-9 h-9" />
-                        <FaJava className="w-9 h-9"/>
-                        <FaPython className="w-9 h-9"/>
+                        <FaHtml5 className="text-4xl" />
+                        <FaCss3  className="text-4xl" />
+                        <FaAngular  className="text-4xl" />
+                        <FaJava className="text-4xl"/>
+                        <FaPython className="text-4xl"/>
                     </div>
                 </div>
             </div>

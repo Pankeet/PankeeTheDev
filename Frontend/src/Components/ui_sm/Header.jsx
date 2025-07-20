@@ -66,20 +66,25 @@ export default function Header_sm({ theme, setheme }) {
           </div>
           <div className='h-screen w-full grid place-content-center text-2xl text-purple-600'>
           <nav className='flex-col flex gap-5'>
-            <a href="/" 
-                className='bg-gray-800 rounded-lg px-4 py-3'>
+            <Link to='/'
+                className='bg-gray-800 rounded-lg px-4 py-3 text-center'
+                onClick={() => setsidebaropen(false)}>
               Home 
-            </a>
-            <a href="/projects" 
-              className='bg-gray-800 rounded-lg px-4 py-3'>
+            </Link>
+
+            <Link to="/projects" 
+              className='bg-gray-800 rounded-lg px-4 py-3'
+              onClick={() => setsidebaropen(false)}>
               Project
-            </a>
+            </Link>
+
             <a href='https://contact-me-flax-nu.vercel.app/' 
             target='_blank' 
             className='bg-gray-800 rounded-lg px-4 py-3'
-            rel=''>
+            rel='noopener noreferrer'>
               Contact 
             </a>
+
           </nav>
         </div>
         </div>
