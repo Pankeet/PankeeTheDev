@@ -65,7 +65,7 @@ const cardContainer = {
     alignItems: "center",
     position: "relative",
     paddingTop: 20,
-    marginBottom: -120,
+    marginBottom : "50px"
 }
 
 const splash = {
