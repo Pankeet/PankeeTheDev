@@ -19,9 +19,9 @@
 }
 
 .imgCSS {
-  @apply w-80 h-80 rounded-full;
+  @apply lg:w-80 lg:h-80 w-40 h-40 rounded-full;
 }
 
 .aboutCSS {
-  @apply bg-gray-200 text-black px-3 py-1 rounded-xl hover:bg-gray-400 text-lg;
+  @apply bg-gray-200 text-black px-3 py-1 rounded-xl hover:bg-gray-400 lg:text-lg text-sm;
 }

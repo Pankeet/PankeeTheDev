@@ -1,7 +1,17 @@
 import * as motion from "motion/react-client"
+import { Helmet } from "react-helmet"
 export default function ScrollTriggered() {
     return (
         <div style={container}>
+            <Helmet>
+                <title>Pankeet's Projects</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Explore Pankeet's portfolio with full-stack projects, clean design, and functionally-fueled code." />
+                <meta property="og:title" content="Pankeet | Full Stack Developer" />
+                <meta property="og:image" content="https://pankeet-manubarwala.vercel.app/img/Logo.png" />
+                <meta property="og:description" content="Take a peek at my best dev work, side hustles, and experiments in caffeine-fueled creativity." />
+                <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/projects" />
+            </Helmet>
             {homepageSections.map(({content, hueA, hueB, i , href}) => (
                 <Card i={i} content={content} hueA={hueA} hueB={hueB} href={href} key={i} />
             ))}
