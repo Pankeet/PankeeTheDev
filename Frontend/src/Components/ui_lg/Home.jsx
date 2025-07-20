@@ -42,7 +42,7 @@ export default function IntroBody_lg({theme}){
       </Helmet>
       <div className="mt-20 grid grid-cols-11">
       <div className='grid place-content-center col-span-6'>
-        <div className = {`max-w-32 lg:max-w-96 lg:text-2xl md:text-md text-sm font-semibold mb-1 bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "from-blue-200 to-blue-300"}`}>
+        <div className = {`max-w-96 lg:text-2xl md:text-md text-sm font-semibold mb-1 bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "from-blue-200 to-blue-300"}`}>
           <div className='ml-1 inline-block w-full leading-snug break-words'>
           <Typewriter 
             words={['C++ Programmer' , 'Jr. Software Developement Engineer', 'Computer Engineer' , 'Full Stack Developer' ]}
