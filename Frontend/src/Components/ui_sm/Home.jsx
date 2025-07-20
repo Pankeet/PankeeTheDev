@@ -40,7 +40,7 @@ export default function IntroBody_sm({theme}){
         <meta property="og:image" content="https://pankeet-manubarwala.vercel.app/img/Logo.png" />
         <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/" />
       </Helmet>
-      <div className='grid grid-cols-2 mt-7 mx-2'>
+      <div className='grid grid-cols-2 mt-7 ml-3'>
         <div className='col-span-1 grid place-content-center'>
             <div className={`ml-1 text-md inline-block max-w-48 break-words bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "from-blue-200 to-blue-300"}`}>
               <Typewriter 
