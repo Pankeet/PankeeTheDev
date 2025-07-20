@@ -5,20 +5,20 @@ import next from "/img/nextjs.svg";
 import mongo from "/img/mongodb.png";
 import tsc from "/img/typescript.svg";
 import Bot  from "/img/GptBot.png";
-export default function AboutMe(){
+export default function AboutMe_lg(){
     return (
-        <div className="lg:h-screen w-full grid grid-cols-4 font-serif">
-            <div className="col-span-2 flex lg:justify-center lg:items-center justify-start items-center">
-                <img src={Bot} alt="Software Engineer" className="lg:size-96 md:size-72 size-40 lg:shadow-xl lg:shadow-[#631FF0] rounded-xl" />
+        <div className="h-screen w-full grid grid-cols-4 font-serif">
+            <div className="col-span-2 flex justify-center items-center">
+                <img src={Bot} alt="Software Engineer" className="size-96 shadow-xl shadow-[#631FF0] rounded-xl" />
             </div>
-            <div className="col-span-2 lg:mt-5 grid place-content-center mt-10">
+            <div className="col-span-2 mt-5 grid place-content-center">
                 <div>
                 <span className="text-2xl font-semibold text-purple-700">
                     About Me
                 </span>
                 </div>
                 <div>
-                    <div className="text-lg text-justify mr-32 lg:mr-20 lg:mt-6 mt-3 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-6">      
+                    <div className="text-lg text-justify mr-20 mt-6 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-6">      
                         <p>
                            <i>Welcome to my portfolio.</i> I'm Pankeet, a 21-year-old Computer Science 
                            undergraduate with a strong passion for Software Development, System Design, and 

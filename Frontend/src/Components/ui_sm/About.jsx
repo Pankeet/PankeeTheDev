@@ -1,0 +1,58 @@
+import { FaGithub , FaLinkedin } from "react-icons/fa";
+import { FaReact , FaJava , FaPython , FaNodeJs , FaHtml5 , FaCss3 , FaGit , FaAngular } from "react-icons/fa";
+import cpp from "/img/cpp.svg";
+import next from "/img/nextjs.svg";
+import mongo from "/img/mongodb.png";
+import tsc from "/img/typescript.svg";
+import Bot  from "/img/GptBot.png";
+export default function AboutMe_sm(){
+    return (
+        <div className="w-full mt-10 mb-10">
+            <div>
+            <span className="text-2xl text-purple-700 mx-12">
+                <b>About Me :-</b>
+            </span>
+            </div>
+
+            <div className="grid grid-cols-3">
+                    <div className="col-span-1 flex justify-center items-center mt-10 mx-2">
+                        <img src={Bot} alt="Software Engineer" className="size-28 shadow-xl shadow-[#631FF0] rounded-xl" />
+                    </div>
+                    <div className="col-span-2 flex justify-center items-center mt-7">
+                    <div className="text-sm font-sans text-justify mx-7 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-4">      
+                        <p>
+                           <i>Welcome to my portfolio.</i> I'm Pankeet, a Software Development Engineer, System Designer, and 
+                           Full Stack Developer. I specialize in Mern Stack, enabling seamless cross-platform web-app development and Data Structures and Algorithms.
+                           My long-term ambition is to master advanced algorithms
+                        </p> 
+                        <p>
+                            <b><i>Education :-</i></b>
+                        </p>
+                        <p>
+                            B.Tech in Computer Science and Engineering with specialization in IOT <br />
+                            G H Patel College of Engineering and Technology <br />
+                            <b>2022 - 2026 | CGPA :- 9.20</b>
+                        </p>
+                    </div>
+                    </div>
+            </div>
+            <div className="flex justify-start mx-12 items-center text-purple-700 text-2xl my-6">
+                <b>My TechStack</b>
+            </div>
+            <div className="flex gap-3 mx-8 max-w-full break-words">
+                <img src={cpp} alt="cpp" className="w-9 h-9" />
+                <FaReact className="w-9 h-9"/>
+                <img src={tsc} className="w-9 h-9" alt="typescript" />
+                <FaGit  className="w-9 h-9" />
+                <FaNodeJs className="w-9 h-9"/>
+                <img src={mongo} alt="mongodb" className="w-9 h-9" />
+                <img src={next} alt="nextjs" className="w-9 h-9" />
+                <FaHtml5 className="w-9 h-9" />
+                <FaCss3  className="w-9 h-9" />
+                <FaAngular  className="w-9 h-9" />
+                <FaJava className="w-9 h-9"/>
+                <FaPython className="w-9 h-9"/>
+            </div>
+        </div>
+    )
+}

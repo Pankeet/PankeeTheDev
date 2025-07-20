@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { useLayoutEffect , useRef } from 'react';
 
 
-export default function Header({ theme, setheme }) {
+export default function Header_lg({ theme, setheme }) {
 
   const location = useLocation();
   const animate = useRef();
