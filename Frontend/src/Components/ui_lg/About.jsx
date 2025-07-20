@@ -42,19 +42,19 @@ export default function AboutMe_lg(){
                     <div className="mt-6">
                         <span className="text-2xl font-semibold text-purple-700">My TechStack</span>
                     </div>
-                    <div className="flex gap-3 mt-4">
+                    <div className="flex gap-3 mt-3 flex-wrap">
                         <img src={cpp} alt="cpp" className="w-9 h-9" />
-                        <FaReact className="text-4xl"/>
+                        <FaReact className="text-4xl" />
                         <img src={tsc} className="w-9 h-9" alt="typescript" />
-                        <FaGit  className="text-4xl" />
-                        <FaNodeJs className="text-4xl"/>
+                        <FaGit className="text-4xl" />
+                        <FaNodeJs className="text-4xl" />
                         <img src={mongo} alt="mongodb" className="w-9 h-9" />
                         <img src={next} alt="nextjs" className="w-9 h-9" />
                         <FaHtml5 className="text-4xl" />
-                        <FaCss3  className="text-4xl" />
-                        <FaAngular  className="text-4xl" />
-                        <FaJava className="text-4xl"/>
-                        <FaPython className="text-4xl"/>
+                        <FaCss3 className="text-4xl" />
+                        <FaAngular className="text-4xl" />
+                        <FaJava className="text-4xl" />
+                        <FaPython className="text-4xl" />
                     </div>
                 </div>
             </div>

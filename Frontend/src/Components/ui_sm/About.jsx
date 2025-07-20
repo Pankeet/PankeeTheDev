@@ -39,7 +39,7 @@ export default function AboutMe_sm(){
             <div className="flex justify-start mx-12 items-center text-purple-700 text-2xl my-6">
                 <b>My TechStack</b>
             </div>
-            <div className="flex gap-3 mx-8 max-w-full break-words">
+            <div className="flex gap-3 m-5 flex-wrap break-words">
                <img src={cpp} alt="cpp" className="w-9 h-9" />
                 <FaReact className="text-4xl"/>
                 <img src={tsc} className="w-9 h-9" alt="typescript" />
