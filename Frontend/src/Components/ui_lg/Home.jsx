@@ -42,7 +42,7 @@ export default function IntroBody_lg({theme}){
       </Helmet>
       <div className="mt-20 grid grid-cols-11">
       <div className='grid place-content-center col-span-6'>
-        <div className = {`max-w-96 lg:text-2xl md:text-md text-sm font-semibold mb-1 bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "from-blue-200 to-blue-300"}`}>
+        <div className = {`max-w-96 lg:text-2xl md:text-md text-sm font-semibold mb-1 bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "to-purple-400 from-purple-600"}`}>
           <div className='ml-1 inline-block w-full leading-snug break-words'>
           <Typewriter 
             words={['C++ Programmer' , 'Jr. Software Developement Engineer', 'Computer Engineer' , 'Full Stack Developer' ]}
@@ -54,8 +54,8 @@ export default function IntroBody_lg({theme}){
             delaySpeed={2000}></Typewriter>
           </div>
             </div>
-      <div className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "from-blue-300 to-blue-100"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
-      <div className = {`myName text-6xl  font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "from-blue-200 to-blue-300"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
+      <div className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
+      <div className = {`myName text-6xl  font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
       </div>
       <div className = "col-span-5 grid place-content-center">
         <video autoPlay loop muted alt="SDE" className={`imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>

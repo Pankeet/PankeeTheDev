@@ -42,7 +42,7 @@ export default function IntroBody_sm({theme}){
       </Helmet>
       <div className='grid grid-cols-2 mt-7 ml-3'>
         <div className='col-span-1 grid place-content-center'>
-            <div className={`ml-1 text-md inline-block max-w-48 break-words bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "from-blue-200 to-blue-300"}`}>
+            <div className={`ml-1 text-md inline-block max-w-48 break-words bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "to-purple-400 from-purple-600"}`}>
               <Typewriter 
                 words={['C++ Programmer' , 'Jr. Software Developement Engineer', 'Computer Engineer' , 'Full Stack Developer' ]}
                 loop={true}
@@ -54,9 +54,9 @@ export default function IntroBody_sm({theme}){
               </div>
               <div className='mt-1'>
                 <div className = {`myName md:text-4xl text-3xl font-bold bg-gradient-to-r 
-                  ${theme ? "from-blue-950 to-blue-900" : "from-blue-300 to-blue-100"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
+                  ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
                 <div className = {`myName md:text-4xl text-3xl font-bold bg-gradient-to-r 
-                  ${theme ? "from-blue-950 to-blue-900" : "from-blue-200 to-blue-300"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
+                  ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
               </div>
         </div>
 
