@@ -4,7 +4,7 @@ import { Sidebar } from "../icons/sidebar";
 import { Close } from "../icons/Close";
 import { useState } from 'react';
 import Lottie from "lottie-react";
-import animationData from "../../assets/loader.json";
+//import animationData from "../../assets/loader.json";
 
 export default function Header_sm({ theme, setheme }) {
   const [sidebaropen, setsidebaropen] = useState(false);
@@ -39,6 +39,7 @@ export default function Header_sm({ theme, setheme }) {
           </div>
           <div className="flex items-center">
             <button
+            aria-label='toggle page theme'
               className="toggle-container"
               style={{
                 ...container,
@@ -81,6 +82,8 @@ export default function Header_sm({ theme, setheme }) {
             </Link>
 
             <a href='https://contact-me-flax-nu.vercel.app/' 
+            role='button'
+            aria-label='Open Contact Page'
             target='_blank' 
             className='bg-gray-800 rounded-lg px-4 py-3'
             rel='noopener noreferrer'>

@@ -56,8 +56,8 @@ export default function Header_lg({ theme, setheme }) {
 
   if (!loading) {
     return (
-      <div ref={animate} className="font-serif flex text-xl mt-3 mb-1 mx-3 pb-2">
-        <div>
+      <div ref={animate} className="font-serif flex text-xl mt-3 mb-1 mx-3 pb-2" role="main"> 
+        <div> 
           <Link to="/" className='headerCSS'>
             <span className={`${location.pathname === '/' ? 'activeHeader' : ''} hover:text-red-400 hover:border-b-2 hover:border-b-red-400`}>
               Home
@@ -72,7 +72,9 @@ export default function Header_lg({ theme, setheme }) {
           </Link>
         </div>
         <div>
-          <a onClick={(e) => {
+          <a role="button"
+            aria-label="Open contact page"
+            onClick={(e) => {
              e.preventDefault();
              setLoading(true); 
             }}
@@ -84,6 +86,7 @@ export default function Header_lg({ theme, setheme }) {
 
         <div className='ml-auto mr-10'>
           <button
+           aria-label="Toggle Light-Dark theme"
             className="toggle-container"
             style={{
               ...container,

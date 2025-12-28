@@ -77,15 +77,13 @@ export default function IntroBody_lg({theme}){
         </a>
        </div>
        <div className="techLinks flex justify-start lg:mx-36 lg:mt-10 items-center gap-3 mx-16 mt-7">
-                    <a href="https://github.com/Pankeet" target="_blank" rel="noopener noreferrer" className={`${theme ? "text-black hover:text-gray-500" : " text-white hover:text-gray-400"} transition duration-200`}>
+                    <a aria-label='Open my Github' href="https://github.com/Pankeet" target="_blank" rel="noopener noreferrer" className={`${theme ? "text-black hover:text-gray-500" : " text-white hover:text-gray-400"} transition duration-200`}>
                         <FaGithub className="w-9 h-9" />
                     </a>
-                    <a href="https://www.linkedin.com/in/pankeet04/" target="_blank" rel="noopener noreferrer" className={`${theme ? "text-black hover:text-gray-500" : " text-white hover:text-gray-400"} transition duration-200`}>
+                    <a aria-label='Open my LinkedIn page' href="https://www.linkedin.com/in/pankeet04/" target="_blank" rel="noopener noreferrer" className={`${theme ? "text-black hover:text-gray-500" : " text-white hover:text-gray-400"} transition duration-200`}>
                         <FaLinkedin className="w-9 h-9" />
                     </a>
         </div>
       </div>
     )
   }
-  
-
