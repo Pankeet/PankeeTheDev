@@ -1,12 +1,13 @@
 import './App.css';
+import { useEffect, useState } from 'react';
+import { Suspense, lazy } from "react";
 import Header_lg from "./Components/ui_lg/Header";
 import Header_sm from "./Components/ui_sm/Header";
-import ScrollTriggered from './Components/Project';
-import { useEffect, useState } from 'react';
-import IntroBody_lg from './Components/ui_lg/Home';
-import AboutMe_lg from "./Components/ui_lg/About";
-import IntroBody_sm from './Components/ui_sm/Home';
-import AboutMe_sm from "./Components/ui_sm/About";
+const ScrollTriggered = lazy(() => import('./Components/Project'));
+const IntroBody_lg = lazy(() => import('./Components/ui_lg/Home'));
+const AboutMe_lg = lazy(() => import("./Components/ui_lg/About")) ;
+const IntroBody_sm = lazy(() => import('./Components/ui_sm/Home'));
+const AboutMe_sm = lazy(() => import("./Components/ui_sm/About"));
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -26,12 +27,14 @@ function App() {
       <div role='main' className={`overflow-x-hidden h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-950' : 'bg-gradient-to-r from-gray-950 to-black text-[#ece9e2]'}`}>
         {!screen_small && <Header_lg setheme={setheme} theme={theme} /> }
         {screen_small && <Header_sm setheme={setheme} theme={theme} />}
-        <Routes>
-          <Route path="/" element={<>{screen_small ? (<><IntroBody_sm theme={theme} /><AboutMe_sm theme={theme} /></>) : (<><IntroBody_lg theme={theme} /><AboutMe_lg theme={theme} /></>)}</>}/>
-          <Route path="/projects" element={<><ScrollTriggered /></>}/>
-          <Route path="*" element={<ErrorPage />}
-          />
-        </Routes>
+        <Suspense fallback={<div className='font-serif text-red-500 text-xl'></div>}>
+          <Routes>
+            <Route path="/" element={<>{screen_small ? (<><IntroBody_sm theme={theme} /><AboutMe_sm theme={theme} /></>) : (<><IntroBody_lg theme={theme} /><AboutMe_lg theme={theme} /></>)}</>}/>
+            <Route path="/projects" element={<><ScrollTriggered /></>}/>
+            <Route path="*" element={<ErrorPage />}
+            />
+          </Routes>
+        </Suspense>
       </div>
     </Router>
   );
