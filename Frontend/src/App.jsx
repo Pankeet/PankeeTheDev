@@ -7,6 +7,7 @@ import IntroBody_lg from './Components/ui_lg/Home';
 import AboutMe_lg from "./Components/ui_lg/About";
 import IntroBody_sm from './Components/ui_sm/Home';
 import AboutMe_sm from "./Components/ui_sm/About";
+import Loader from './Components/animate/lottie';
 const ScrollTriggered = lazy(() => import('./Components/Project'));
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -30,7 +31,7 @@ function App() {
         <Suspense fallback={<div className='font-serif text-red-500 text-xl'>Loading Projects...</div>}>
           <Routes>
             <Route path="/" element={<>{screen_small ? (<><IntroBody_sm theme={theme} /><AboutMe_sm theme={theme} /></>) : (<><IntroBody_lg theme={theme} /><AboutMe_lg theme={theme} /></>)}</>}/>
-            <Route path="/projects" element={<Suspense fallback={<div className="font-serif text-red-500 text-xl">Loading Projects...</div>}><ScrollTriggered /></Suspense>}/>
+            <Route path="/projects" element={<Suspense fallback={<Loader />}><ScrollTriggered /></Suspense>}/>
             <Route path="*" element={<ErrorPage />}
             />
           </Routes>
