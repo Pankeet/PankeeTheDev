@@ -8,7 +8,7 @@ function Loader() {
         animationData={animationData}
         loop={true}
         autoplay={true}
-        style={{ width: 140, height: 140 }}
+        style={{ width: 125, height: 125 }}
       />
     </div>
   );

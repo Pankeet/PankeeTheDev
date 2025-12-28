@@ -1,8 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from "framer-motion";
 import gsap from 'gsap';
-import Lottie from "lottie-react";
-import animationData from "../../assets/loader.json";
+import Loader from '../animate/lottie';
 import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 
 export default function Header_lg({ theme, setheme }) {
@@ -10,18 +9,16 @@ export default function Header_lg({ theme, setheme }) {
   const location = useLocation();
   const animate = useRef();
   const [loading, setLoading] = useState(false);
-  const lottieRef = useRef(null); 
 
   useEffect(() => {
-    if (loading) {
+    if (!loading) return;
+
       const timer = setTimeout(() => {
-        lottieRef.current.play();
         window.location.href = "https://contact-me-flax-nu.vercel.app/";
       }, 1600); 
 
       return () => clearTimeout(timer);
-    }
-  }, [loading]);
+    }, [loading]);
 
   useLayoutEffect(() => {
     gsap.from(animate.current.children, {
@@ -110,14 +107,8 @@ export default function Header_lg({ theme, setheme }) {
     );
   } else {
     return (
-      <div className='h-screen w-screen flex justify-center items-center bg-white dark:bg-black'>
-        <Lottie
-          lottieRef={lottieRef}
-          animationData={animationData}
-          loop={false}
-          autoplay={true} 
-          style={{ width: 100, height: 100 }}
-        />
+      <div className='h-screen w-full flex justify-center items-center bg-white dark:bg-black'>
+        <Loader />
       </div>
     );
   }
